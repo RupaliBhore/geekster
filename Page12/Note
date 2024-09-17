@@ -1,0 +1,10 @@
+Q1  :- HW_Print till n for this Series 5,11,17,23,29..
+Q2  :- HW_Print from n to 3 using while loop
+Q3  :- HW_Print n, n-5, n-10 till greater than 0
+Q4  :- HW_Find Permutation 1
+Q5  :- HW_Print fibonacci series 2
+Q6  :- HW_Running sum and average
+Q7  :- Running product while loop.
+Q8  :- Steps till n greater than 0
+Q9  :- nth power of 10 using while loop
+Q10 :- Print nth Tribonacci number 

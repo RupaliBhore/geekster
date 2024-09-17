@@ -1,0 +1,10 @@
+Q1  :- HW_Print series AAA,bb,CCC,dd,EEE,ff till 26 lines
+Q2  :- HW_Print Z,z,X,x,V,v till A,a. using loop.
+Q3  :- Print Alternate Elements of a String
+Q4  :- Reverse The String
+Q5  :- nth power of 2
+Q6  :- Print powers of 2 less than n
+Q7  :- Print n/3
+Q8  :- Multiples of 3, 5 and Both 3 and 5
+Q9  :- HW_Print Vowels in the string
+Q10 :- HW_Print power of 17 from 1 to n

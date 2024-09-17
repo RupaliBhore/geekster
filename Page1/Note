@@ -1,0 +1,11 @@
+Q1  :- print"Hello World. I am here."
+Q2  :- print the pattern-1
+Q3  :- print star pattern-1
+Q4  :- print star pattern-2
+Q5  :- print the pattern-3
+Q6  :- hw_print"Hello I am enjoying coding."
+Q7  :- HW_print the star pattern
+Q8  :- hw_print the pattern-1
+Q9  :- Sum and Difference of x and y
+Q10 :- Area and Perimeter 5
+

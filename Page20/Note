@@ -1,0 +1,10 @@
+Q1 :-  HW_Print indexes ,  where array elements are even
+Q2 :- Check if x is present in array or not ()
+Q3 :- Print first index of x in array ()
+Q4 :- hw_Print last index of x in array
+Q5 :- Print First NON MATCHING NUMBER
+Q6 :- HW_Print First Vowel occurrence  (())
+Q7 :- HW_Print All Composite Number of Array  // not prime or more then two divisor ()
+Q8 :- HW_First NON Matching Value From End
+Q9 :- HW_First Occurance of consonant from End (())
+Q10 :-HW_Print Odd Elements of Array inline
