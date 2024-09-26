@@ -1,0 +1,10 @@
+Q1  :- Given x and y, print xy
+Q2  :- Print digit by digit of a three digit number
+Q3  :- Reverse a 3 digit number
+Q4  :- Print the final number xyzw... ()
+Q5  :- Reverse n-digit number
+Q6  :- Write a function to check if an Armstrong number or not  4^3+0^3+7^3 = 403
+Q7  :- Rotate 7-digit number to right by three ()
+Q8  :- HW_Reverse Digits
+Q9  :- HW_Check Palindrome //equal to the reverse of the number
+Q10 :- HW_Transform a Number ()
