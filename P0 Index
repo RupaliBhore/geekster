@@ -1,0 +1,355 @@
+Page 1
+
+Q1  :- print"Hello World. I am here."
+Q2  :- print the pattern-1
+Q3  :- print star pattern-1
+Q4  :- print star pattern-2
+Q5  :- print the pattern-3
+Q6  :- hw_print"Hello I am enjoying coding."
+Q7  :- HW_print the star pattern
+Q8  :- hw_print the pattern-1
+Q9  :- Sum and Difference of x and y
+Q10 :- Area and Perimeter 5
+
+
+
+Page 2
+
+Q1  :- Fahrenheit and Celsius
+Q2  :- Add Last Digits
+Q3  :- HW_Area of a circle 6
+Q4  :- HW_Area of triangle 13
+Q5  :- Greater than 100 or not
+Q6  :- xyzw
+Q7  :- Even or not
+Q8  :- Sum is less than 150 or not.
+Q9  :- HW_Greater than 1000 or not.
+Q10 :- Adult or not 1
+
+
+Page 3
+
+Q1  :- Shop Discount
+Q2  :- High Sum or Low Sum
+Q3  :- Grade the student 1
+Q4  :- Print Bonus
+Q5  :- hw_Tax or not
+Q6  :- HW_GKSTR06 Greater_Number
+Q7  :- HW_GKSTR04 Even_Or_Odd
+Q8  :- HW_Print age bracket
+Q9  :- HW_Print final salary given age
+Q10 :- Print the oldest among three
+
+
+
+
+Page 4
+
+Q1  :- Rich Adult Young
+Q2  :- Print final z
+Q3  :- runner up 3
+Q4  :- HW_Even Odd 1000
+Q5  :- HW_Marks of a student in 5 subjects
+Q6  :- HW_abcd 88
+Q7  :- HW_Grace Marks 1
+Q8  :- Tell about x y
+Q9  :- Print the final incremented salary
+Q10 :- Print final z given xyz
+
+Page 5
+
+Q1  :- Print if divisible by both 3 and 4
+Q2  :- Print z and x divisible by 3
+Q3  :- Grade the student-2
+Q4  :- Switch Calculator 1
+Q5  :- HW_Height, weight and age
+Q6  :- HW_print above given ab
+Q7  :- HW_Top Management or not
+Q8  :- HW_Marks and Rank
+Q9  :- HW_Print the day
+Q10 :- HW_Print the month
+
+
+
+Page 6
+
+Q1  :- Male or Female
+Q2  :- jumping character
+Q3  :- Small Capital or Digit
+Q4  :- Add if a digit
+Q5  :- Toggle the character
+Q6  :- Print character at 3rd index
+Q7  :- Concatenate_Two_Strings
+Q8  :- string concatenate 2
+Q9  :- HW_Concatenate 3 strings
+Q10 :- HW_Basic Calculator 9
+
+
+
+
+Page 7
+
+Q1  :- Hw_Print two-digit number
+Q2  :- HW_Toggle and 2 jumps left
+Q3  :- HW_UpperCase_Or_LowerCase
+Q4  :- GKSTR09 Print_Range
+Q5  :- Print x to n
+Q6  :- Print table of 4
+Q7  :- GKSTR11 Multiple Of 7
+Q8  :- Print 2,9,16...
+Q9  :- Print 3 7 11 15...
+Q10 :-  Print n to 1
+
+Page 8
+
+Q1  :- Print n to 0
+Q2  :- Print n to x
+Q3  :- Reverse 5 table
+Q4  :- print odd from n to 1
+Q5  :- HW_Print numbers 20 to n
+Q6  :- HW_Print first N multiples of 9
+Q7  :- HW_Print first n multiples of 11.
+Q8  :- HW_Print Series 3, 11, 19...
+Q9  :- HW_Print series 13, 18, 23, 28...
+Q10 :- HW_Print n to 5
+
+
+
+Page 9
+
+Q1  :- HW_Print multiples of 8 from n to 1
+Q2  :- Print n, n-3, n-6 .....
+Q3  :- Print n, n-k, n-2k, n-3k .....
+Q4  :- print a to z
+Q5  :- Print a, c, e... till the characters are less than z
+Q6  :- Print a, B, c, D, e, F, g...... 26 characters
+Q7  :- Print z, y, x.... till 26 characters
+Q8  :- GKSTR15 Print_Even
+Q9  :- HW_Print series n, n-3k, n-6k, n-12k..
+Q10 :- HW_Print Alphabets A-Z
+
+
+
+
+
+Page 10
+
+Q1  :- HW_Print series AAA,bb,CCC,dd,EEE,ff till 26 lines
+Q2  :- HW_Print Z,z,X,x,V,v till A,a. using loop.
+Q3  :- Print Alternate Elements of a String
+Q4  :- Reverse The String
+Q5  :- nth power of 2
+Q6  :- Print powers of 2 less than n
+Q7  :- Print n/3
+Q8  :- Multiples of 3, 5 and Both 3 and 5
+Q9  :- HW_Print Vowels in the string
+Q10 :- HW_Print power of 17 from 1 to n
+
+
+
+Page 11
+
+Q1  :- HW_Print numbers 1-n in separate lines.
+Q2  :- HW_FizzBuzz problems
+Q3  :- Running Sum for loop
+Q4  :- Nth Fibonacci Number 7
+Q5  :- Fibonacci number 12
+Q6  :- Print 0 to n
+Q7  :- Printing 5 to N(While Loop)
+Q8  :- Print 4,13,22,31.....n
+Q9  :- Print n, n-k, n-2k, n-3k.... till l
+Q10 :- HW_Print In Range(x and y)
+
+
+
+Page 12
+
+Q1  :- HW_Print till n for this Series 5,11,17,23,29..
+Q2  :- HW_Print from n to 3 using while loop
+Q3  :- HW_Print n, n-5, n-10 till greater than 0
+Q4  :- HW_Find Permutation 1
+Q5  :- HW_Print fibonacci series 2
+Q6  :- HW_Running sum and average
+Q7  :- Running product while loop.
+Q8  :- Steps till n greater than 0
+Q9  :- nth power of 10 using while loop
+Q10 :- Print nth Tribonacci number 
+
+
+
+Page 13
+
+Q1  :- Print all digits from end
+Q2  :- GKSTR46 Number of Digits
+Q3  :- Print total steps when n/2
+Q4  :- Print steps and update maximum
+Q5  :- Hw_print z-a
+Q6  :- HW_Running sum and average
+Q7  :- HW_Print z, w, t...
+Q8  :- Steps till n greater than 0
+Q9  :- HW_Print n, n-3k, n-6k, n-12k,... till m.
+Q10 :-  Pattern 1 - Print Stars in same line
+
+
+
+Page 14
+
+Q1  :- Pattern 2 - Print n x 12 star rectangle
+Q2  :- Pattern 3 - nxn star rectangle
+Q3  :- Pattern 3 - nxn star rectangle
+Q4  :- GKSTR19 Pattern_4
+Q5  :- GKSTR20 Pattern_5             Right sided triangle
+Q6  :- attern 6 - Right triangle of 5 multiples
+Q7  :- HW_Print Inverted Right Angled Triangle Pattern
+Q8  :- Hw_Print Spaced Right-angled whole numbers
+Q9  :- HW_Print Inverted Right Angled Triangle reversed whole numbers
+Q10 :- Hw_Print Inverted triangle
+
+
+
+
+
+Page 15
+
+Q1  :- Pattern 7 - Print a hollow m by n star rectangle.
+Q2  :- Pattern 8 - Print a hollow square without top
+Q3  :- Pattern 9 - Square Ladder with top and bottom
+Q4  :- GKSTR24 Pattern_7_Pyramid
+Q5  :- GKSTR29_Pattern_12_Diamond
+Q6  :- HW_Print Big Ladder
+Q7  :- HW_Print V Pattern
+Q8  :- HW_Print Dumroo Pattern
+Q9  :- HW_Print the Number Pattern 2
+Q10 :- Factorial of N
+
+
+
+Page 16
+Q1  :- Find nCr.
+Q2  :- Find sum using a function
+Q3  :- Find product of the two numbers using function.
+Q4  :- Swap x and y
+Q5  :- Swap x y z
+Q6  :- HW_print all even number
+Q7  :- HW_Calculate Area 3
+Q8  :- HW_Total Salary 2
+Q9  :- HW_If triangle is possible.
+Q10 :- HW_Que and Rem
+
+
+
+
+Page 17
+
+Q1  :- Given x and y, print xy
+Q2  :- Print digit by digit of a three digit number
+Q3  :- Reverse a 3 digit number
+Q4  :- Print the final number xyzw... ()
+Q5  :- Reverse n-digit number
+Q6  :- Write a function to check if an Armstrong number or not  4^3+0^3+7^3 = 403
+Q7  :- Rotate 7-digit number to right by three ()
+Q8  :- HW_Reverse Digits
+Q9  :- HW_Check Palindrome //equal to the reverse of the number
+Q10 :- HW_Transform a Number ()
+
+
+
+Page 18 
+
+Q1 :- HW_Print Armstrong in a range
+Q2 :- HW_Print count of digits and digits line by line.
+Q3 :-  Find GCD 3  Greatest Common Divisor  //HCF heigest common factor ()
+Q4 :- Prime checker 2 ()
+Q5 :- Print all unique prime factors ()
+Q6 :- Print all factors of a number ()
+Q7 :- Divide n by 2 3 5 and tell steps ()
+Q8 :- HW_Print Primes 1
+Q9 :- HW_Print "prime" or "not prime" 
+Q10 :- Print the array elements linewise
+
+
+
+Page 19
+
+Q1  :-  Print Alternate Array Elements Linewise
+Q2  :-  Print Array Elements Reverse linewise
+Q3  :-  Print Array element if index divisible by 3
+Q4  :-  Check if two arrays are identical? ()
+Q5  :-  Print two arrays alternately ()
+Q6  :-  HW_Print Alternate array elements from 1st index
+Q7  :-  HW_Print Alternate array elements in reverse inline
+Q8  :-  HW_Print indexes where array elements are odd
+Q9  :-  HW_Print Even Array Elements inline
+Q10 :-  HW_Print Array Elements where index is not divisible by 4 inline
+
+
+
+
+
+
+Page 20 
+
+
+Q1 :-  HW_Print indexes ,  where array elements are even
+Q2 :- Check if x is present in array or not ()
+Q3 :- Print first index of x in array ()
+Q4 :- hw_Print last index of x in array
+Q5 :- Print First NON MATCHING NUMBER
+Q6 :- HW_Print First Vowel occurrence  (())
+Q7 :- HW_Print All Composite Number of Array  // not prime or more then two divisor ()
+Q8 :- HW_First NON Matching Value From End
+Q9 :- HW_First Occurance of consonant from End (())
+Q10 :-HW_Print Odd Elements of Array inline
+
+
+
+Page 21
+
+Q1 :-   Sum of all Elements of Array
+Q2 :-   GKSTR35 Count_Even
+Q3 :-   Maximum of Array  (())
+Q4 :-   Product of Elements Except Itself (())
+Q5 :-   HW_Product of Arrays 1
+Q6 :-   HW_Second Largest in array 2 (())
+Q7 :-   HW_GKSTR36 Count_IndexValue_Element (())
+Q8 :-   HW_Print Sum of Elements Except Itself (())
+Q9 :-   HW_Minimum in Array (())
+Q10 :-  HW_Remove elements 1 (())
+
+
+Page 22
+Q1  :- Check Characterstic
+Q2  :- Solve Array
+Q3  :- Update query 1
+Q4  :- Add One
+Q5  :- HW_Perform Operations 1
+Q6  :- HW_Update query 2
+Q7  :- HW_Element as an index
+Q8  :- HW_update with k
+Q9  :- HW_calculator 36
+Q10 :- Print Pair
+
+
+Page :- 23
+Q1  :- Find all Combination
+Q2  :- Solve Array
+Q3  :- Greater At Right
+Q4  :- maximum difference between the two elements
+Q5  :- HW_Find The Pair 4
+Q6  :- HW_Reverse Pair
+Q7  :- HW_Count Odd Pair
+Q8  :- HW_Find Difference 1
+Q9  :- HW_Find Difference 2
+Q10 :- HW_Counting Smaller Numbers in an Array
+
+
+
+Page:-24
+Q1 :- Max Count 3
+Q2 :- Find Duplicate 3
+Q3 :- Double Occurence
+Q4 :- Store Maximum (())  ---
+Q5 :- HW_Repeating and Missing element (()) --  
+Q6 :- HW_Find Me 6
+Q7 :- HW_Mirror Image 4
+
