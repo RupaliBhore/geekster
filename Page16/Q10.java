@@ -25,34 +25,57 @@
 // 7 is divided by 2, so the quotient is 3 and the remainder is 1.
 
 
+import java.io.*;
 import java.util.*;
 
-public class Q10 {
+public class Solution Q10 {
+    
+    static void QRem(int a, int b)
+    {
+        int q=a/b;
+        int re=a % b;
+        
+        System.out.print(q+" "+re);
+    }
 
     public static void main(String[] args) {
-     Scanner scanner = new Scanner(System.in);
-
-        // Reading inputs a and b
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-
-        // Calculate quotient and remainder
-        int quotient = calculateQuotient(a, b);
-        int remainder = calculateRemainder(a, b);
-
-        // Printing the result in required format
-        System.out.println(quotient + " " + remainder);
-
-        scanner.close();
-    }
-
-    // Function to calculate quotient of two numbers
-    public static int calculateQuotient(int a, int b) {
-        return a / b;
-    }
-
-    // Function to calculate remainder of two numbers
-    public static int calculateRemainder(int a, int b) {
-        return a % b;
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        
+        QRem(a,b);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     }
 }
+
+// import java.util.*;
+
+// public class Q10 {
+
+//     public static void main(String[] args) {
+//      Scanner scanner = new Scanner(System.in);
+
+//         // Reading inputs a and b
+//         int a = scanner.nextInt();
+//         int b = scanner.nextInt();
+
+//         // Calculate quotient and remainder
+//         int quotient = calculateQuotient(a, b);
+//         int remainder = calculateRemainder(a, b);
+
+//         // Printing the result in required format
+//         System.out.println(quotient + " " + remainder);
+
+//         scanner.close();
+//     }
+
+//     // Function to calculate quotient of two numbers
+//     public static int calculateQuotient(int a, int b) {
+//         return a / b;
+//     }
+
+//     // Function to calculate remainder of two numbers
+//     public static int calculateRemainder(int a, int b) {
+//         return a % b;
+//     }
+// }
