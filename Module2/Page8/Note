@@ -1,0 +1,12 @@
+
+Page 8
+1 :- HW_Print Alternate Columns
+2 :- HW_Print Alternate Column wise
+3 :- HW_Print Lower triangular matrix
+4 :- Transpose of Matrix of N*N
+5 :- Rotate The Matrix by 180 Degree
+6 :- Rotate The Matrix by 90 Degree
+7 :- Print row wise with condition
+8 :- HW_Rotate The Matrix by 270 Degree
+9 :- HW_Traverse Rows with given condition
+10 :- Reverse Rows of Matrix
