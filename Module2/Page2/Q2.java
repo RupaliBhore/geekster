@@ -79,6 +79,47 @@ public class Q2 {
         return A[left]; // Only one element remains at the `left` pointer
     }
 }
+// import java.util.*;
+
+// public class Solution {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+        
+//         // Read the number of students
+//         int n = sc.nextInt();
+        
+//         // Read the array of marks       1 3 4 2 8 7 
+//         int[] marks = new int[n];
+//         for (int i = 0; i < n; i++) {
+//             marks[i] = sc.nextInt();
+//         }
+        
+//         // Sort the array to facilitate selection
+//         Arrays.sort(marks);     //1 2 3 4 7 8
+//                                 //s          e
+//         // Initialize pointers
+//         int start = 0;
+//         int end = n - 1;
+        
+//         // Simulate N-1 turns
+//         for (int turn = 0; turn < n - 1; turn++) {    //0 1 2 3
+//             if (turn % 2 == 0) {                      //0 //0                    
+//                 // Teacher1's turn - Remove the largest element
+//                 start++;    //1 //2
+//                 //end--;
+//             } else {
+//                 // Teacher2's turn - Remove the smallest element
+//                 //start++;
+//                   end--;  //n-2 //n-3
+//             }
+//         }
+        
+//         // The last remaining number
+//         System.out.println(marks[start]);
+        
+//         sc.close();
+//     }
+// }
 
 
 
