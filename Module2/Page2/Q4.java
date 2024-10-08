@@ -51,13 +51,13 @@ public class Q4 {
         }
 
         // Sort the array
-        Arrays.sort(arr);
+        Arrays.sort(arr); //array sort kelyanantr asc madhe largest value last la jatil tr last che 3 element che product kada
 
         // Calculate the maximum product of three numbers
         // Product of the three largest numbers
         int max1 = arr[N-1] * arr[N-2] * arr[N-3];
 
-        // Product of the two smallest numbers and the largest number
+        // Product of the two smallest numbers and the largest number  //array madhe negativ number pan asu shakata mhunun ha check
         int max2 = arr[0] * arr[1] * arr[N-1];
 
         // The maximum product of three numbers
@@ -67,3 +67,49 @@ public class Q4 {
         System.out.println(result);
     }
 }
+
+
+
+
+  //with fun for leetcode
+// import java.io.*;
+// import java.util.*;
+
+// public class Solution {
+    
+    
+//      public static int maxProductOfThree(int[] a) {
+//         // Check if the array has at least 3 elements
+//         if (a.length < 3) {
+//             throw new IllegalArgumentException("Array must contain at least 3 numbers.");
+//         }
+        
+//         // Sort the array
+//         Arrays.sort(a);
+        
+//         // Calculate the product of the three largest numbers
+//         int max1 = a[a.length - 1] * a[a.length - 2] * a[a.length - 3];
+        
+//         // Calculate the product of the two smallest and the largest number
+//         int max2 = a[0] * a[1] * a[a.length - 1];   // -7 3 -5 2 4   //2 negative number cha product postive yeteo -7*-5=35
+        
+//         // Return the maximum of the two computed products
+//         return Math.max(max1, max2);
+//     }
+
+  
+//     public static void main(String[] args) {
+//         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+//          Scanner sc=new Scanner(System.in);
+//         int n=sc.nextInt();
+//         int a[]=new int[n];
+//         for(int i=0; i<n; i++)
+//         {
+//             a[i]=sc.nextInt();
+//         }
+        
+//         // Compute and print the maximum product of three numbers
+//         int result = maxProductOfThree(a);
+//         System.out.println(result);  // Output: 140
+//     }
+// }
