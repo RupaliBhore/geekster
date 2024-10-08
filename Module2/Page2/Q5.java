@@ -102,6 +102,90 @@ public static void main(String[] args) {
     }
 }
 
+//dry run
+// import java.io.*;
+// import java.util.*;
+
+// public class Solution {
+    
+//      public static int[] mergeSortedArrays(int[] a,int n, int[] b, int m) {
+         
+         
+//          int i=0;
+//          int j=0; 
+//          int k=0;
+//          int res[]=new int[n+m];   //result = new int[N + M] = new int[6] = {0, 0, 0, 0, 0, 0}
+             
+             
+//         while(i<n && j<m) //joprayt i madhe frist arry madhe ele ahet j madhe 2nd array madhe ele ahet toprynt 
+//         {
+//             if(a[i] <= b[j]) //a arryche lahan elemet asel tr res array madhe taka mag k chi index vadava next a array 
+//             {                ///chi inext vadava i++
+//                 res[k]=a[i];
+//                 k++;         //k chi index vadava next
+//                 i++;         //a arryachi index vadava next wali
+//             }
+            
+//             else{            //jar a array cha elemt mota asel b array peksa tar b arryacha ele res array madhe taka
+//                 res[k]=b[j];  //asha prakare aarya sorted madhe marge hoil
+//                 k++;
+//                 j++;
+//             }
+//         }
+         
+//          if(i<n)
+//          {
+//              res[k]=a[i];
+//              k++;
+//              i++;
+//          }
+         
+         
+//          if(j<m)
+//          {
+//              res[k]=b[j];
+//              k++;
+//              j++;
+//          }
+         
+//          return res;
+//      }
+   
+
+//     public static void main(String[] args) {
+//              Scanner sc = new Scanner(System.in);
+        
+//         // Input size of array A
+//         int n = sc.nextInt();
+//         int[] A = new int[n];
+        
+//         // Input elements of array A
+//         for (int i = 0; i < n; i++) {
+//             A[i] = sc.nextInt();
+//         }
+        
+//         // Input size of array B
+//         int m = sc.nextInt();
+//         int[] B = new int[m];
+        
+//         // Input elements of array B
+//         for (int i = 0; i < m; i++) {
+//             B[i] = sc.nextInt();
+//         }
+        
+//         // Merge the two sorted arrays
+//         int[] mergedArray = mergeSortedArrays(A,n, B,m);
+        
+//         // Print the merged array
+//         for (int i : mergedArray) {
+//             System.out.print(i + " ");
+//         }
+//     }
+//     }
+
+
+
+
 
 //LEEtcode
 // class Solution {                                                        //0 1 2 3                //0 1 2 3
