@@ -52,30 +52,83 @@
 // The third distinct maximum does not exist, so the maximum (2) is returned instead.
 
 
+import java.io.*;
 import java.util.*;
 
-public class Q3 {
+public class Solution {  
+      //trird higest max value
 
     public static void main(String[] args) {
-      Scanner sc = new Scanner(System.in);
-
-        // Read the size of the array
-        int N = sc.nextInt();
-        Set<Integer> uniqueSales = new TreeSet<>(Collections.reverseOrder());
-
-        // Read the elements of the array
-        for (int i = 0; i < N; i++) {
-            uniqueSales.add(sc.nextInt());
+       
+        
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Integer arr[]=new Integer[n];  //reverseorder he comparator ahe comparator he collections varch kam karat 
+        for(int i=0; i<n; i++)
+        {
+            arr[i]=sc.nextInt();
         }
-
-        // Convert Set to a List
-        List<Integer> sortedSales = new ArrayList<>(uniqueSales);
-
-        // Check if there are at least three unique sales amounts
-        if (sortedSales.size() >= 3) {
-            System.out.println(sortedSales.get(2)); // The third highest
-        } else {
-            System.out.println(sortedSales.get(0)); // The highest
+        
+        
+        Arrays.sort(arr,Collections.reverseOrder());
+       
+       
+        
+         int count =1;
+        for(int i=1; i<n; i++)
+        {
+           if(arr[i] != arr[i-1])
+           {
+            count++;
+           }
+        
+        
+           if( count==3)
+           {
+            System.out.println(arr[i]);
+             return;
+           }
+            
         }
+        
+        
+        
+         // If less than 3 unique elements exist, return the maximum
+        System.out.println(arr[0]);
+        
+        // for(int i=0; i<n; i++)
+        // {
+        //     System.out.print(arr[i]+" ");
+        // }
     }
+}
+
+
+
+// import java.util.*;
+
+// public class Q3 {
+
+//     public static void main(String[] args) {
+//       Scanner sc = new Scanner(System.in);
+
+//         // Read the size of the array
+//         int N = sc.nextInt();
+//         Set<Integer> uniqueSales = new TreeSet<>(Collections.reverseOrder());
+
+//         // Read the elements of the array
+//         for (int i = 0; i < N; i++) {
+//             uniqueSales.add(sc.nextInt());
+//         }
+
+//         // Convert Set to a List
+//         List<Integer> sortedSales = new ArrayList<>(uniqueSales);
+
+//         // Check if there are at least three unique sales amounts
+//         if (sortedSales.size() >= 3) {
+//             System.out.println(sortedSales.get(2)); // The third highest
+//         } else {
+//             System.out.println(sortedSales.get(0)); // The highest
+//         }
+//     }
 }
