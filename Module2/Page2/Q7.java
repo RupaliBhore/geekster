@@ -24,6 +24,45 @@
 // 2 1 10 5 49 23 90 
 
 
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class WaveArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input size of the array
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        
+        // Input array elements
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        // Transform the array into wave form
+        transformToWave(arr);
+        
+        // Print the result
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+    
+    public static void transformToWave(int[] arr) {
+        // Sort the array                                    //0 1 2 3  4   5 6 
+        Arrays.sort(arr);//10 90 49 2 1 5 23         sort    //1 2 5 10 23 49 90
+        
+        // Swap adjacent elements to create wave pattern
+        for (int i = 0; i < arr.length - 1; i += 2) { //0 //2 //4 //6
+            // Swap elements at index i and i+1
+            int temp = arr[i];  // 1 //5 //23
+            arr[i] = arr[i + 1]; //0+1=1idx val= 2 //2+1=3inx val=10 //4+1=5idx val=49
+            arr[i + 1] = temp; //1 //5 //23
+        }
+        //2 1 10 5 49 23
+    }
+}
 
 
 import java.util.*;
