@@ -125,3 +125,54 @@ public class Q1 {
     }
 
 //discussed
+
+//dry un
+// import java.io.*;
+// import java.util.*;
+
+// public class Solution {
+//                                                       //use 2 poniter approach
+//     public static void main(String[] args) {
+//          Scanner sc=new Scanner (System.in);
+//         int n=sc.nextInt();
+        
+//         int a[]=new int[n];
+//         for(int i=0; i<n; i++)
+//         {
+//             a[i]=sc.nextInt();
+//         }
+        
+//         int i=0;   //starting point 0index rakha
+//         int j=n-1;  //ending point n-1 rakha
+//                                                                                                           //i
+//                                                                                                           //j
+//         while(i<=j)    //jabtak starting point chota he ya barabar he ending point se tabtak loop chalo 1 2 3 4 yese
+//         {                                                                                                  
+//             if(a[i] % 2==0)   //agar starting me even number he to use vese hi rahane do i++ karo aage wala cheack karo
+//             {
+//                 i++;
+//             }
+//             else if(a[j] % 2 !=0)  //agar ending index odd he to use vese he rahane do aur uske piche wla check karo j--
+//             {
+//                 j--;
+//             }
+//             else         //varcha doni pan condition false astil tr else madhe swap kara even left la ghya odd right dya
+//             {                      //If a[i] is odd and a[j] is even, swap them, then increment i and decrement j to                                            //continue checking the next elements. 
+//                 int temp=a[i];   
+//                 a[i]=a[j];  
+//                 a[j]=temp;
+//                 i++;
+//                 j--;
+//             }
+
+//         }
+        
+//         Arrays.sort(a,0,i);   //After rearranging, Arrays.sort(a, 0, i) sorts the even numbers.
+//         Arrays.sort(a,i,n);  //Arrays.sort(a, i, n) sorts the odd numbers.
+        
+//          for(int k=0; k<n; k++)
+//         {
+//             System.out.print(a[k]+" ");
+//         }
+//     }
+// }
