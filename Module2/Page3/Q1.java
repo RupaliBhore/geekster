@@ -32,38 +32,86 @@
 
 // Print the sorted array
 
-
-import java.io.*;
 import java.util.*;
 
-public class Q1 {
+public class Solution {
 
     public static void main(String[] args) {
-         Scanner scanner = new Scanner(System.in);
-
-        // Input the size of the array
-        int N = scanner.nextInt();
-
-        // Input the elements of the array
-        Integer[] arr = new Integer[N];
-        for (int i = 0; i < N; i++) {
-            arr[i] = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        Integer a[] = new Integer[n]; //for using comparator use wrapper class
+        
+        // Reading the array elements
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
         }
-
-        // Sort the array based on the cubes of the elements
-        Arrays.sort(arr, new Comparator<Integer>() {
-            public int compare(Integer a, Integer b) {
-                long cubeA = (long) a * a * a;
-                long cubeB = (long) b * b * b;
-                return Long.compare(cubeA, cubeB);
+        
+        // Sorting the array based on the cubes of the elements              //with lambda
+ //1st way       //Arrays.sort(a, (x, y) -> Integer.compare(x * x * x, y * y * y));
+        
+        
+        
+            
+ //2nd way       // Sort the array by the cubes of its elements        //without lambda
+        // Arrays.sort(a, new Comparator<Integer>() {
+        //     @Override
+        //     public int compare(Integer a, Integer b) {
+        //         return Integer.compare(a * a * a, b * b * b);
+        //     }
+        // });
+        
+        
+        //3rd way
+        
+         Arrays.sort(a); //pahilyanda array sort karun ghya asceding madhe
+        Comparator<Integer> myComp=new Comparator<Integer>()
+        {
+            public int compare(Integer a, Integer b)
+            {
+                return a*a*a* + b*b*b; //ite + kel ki aceding madhe print hoil - kel ki decending mahe print hoil
             }
-        });
-
-        // Output the sorted array
-        for (int i : arr) {
-            System.out.print(i + " ");
+        };
+        
+        
+        // Printing the sorted array
+        for (int i = 0; i < n; i++) {
+            System.out.print(a[i] + " "); //aaryache elemt sorted way madhe print karyace ahet cube nahi
         }
-
-        scanner.close();
     }
 }
+
+// import java.io.*;
+// import java.util.*;
+
+// public class Q1 {
+
+//     public static void main(String[] args) {
+//          Scanner scanner = new Scanner(System.in);
+
+//         // Input the size of the array
+//         int N = scanner.nextInt();
+
+//         // Input the elements of the array
+//         Integer[] arr = new Integer[N];
+//         for (int i = 0; i < N; i++) {
+//             arr[i] = scanner.nextInt();
+//         }
+
+//         // Sort the array based on the cubes of the elements
+//         Arrays.sort(arr, new Comparator<Integer>() {
+//             public int compare(Integer a, Integer b) {
+//                 long cubeA = (long) a * a * a;
+//                 long cubeB = (long) b * b * b;
+//                 return Long.compare(cubeA, cubeB);
+//             }
+//         });
+
+//         // Output the sorted array
+//         for (int i : arr) {
+//             System.out.print(i + " ");
+//         }
+
+//         scanner.close();
+//     }
+// }
