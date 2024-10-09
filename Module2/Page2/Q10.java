@@ -55,6 +55,41 @@ public class Q10{
         }
 }
 
+//linear search o(n) tc 
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    static void peakEl(int a[],int n)   //print all peak elemet
+    {
+        //int curr=0
+        for(int i=1; i<n-1; i++)
+        {
+            int curr=a[i];
+            int left=a[i-1];
+            int right=a[i+1];
+            
+            if(curr>left && curr>right)
+            {
+                System.out.print(a[i]+" ");//arrray ke sare peak elemt print karo
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0; i<n; i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        
+        peakEl(a,n);
+    }
+}
+
 //chatgpt
 
 // import java.io.*;
