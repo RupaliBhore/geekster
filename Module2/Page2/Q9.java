@@ -93,3 +93,46 @@ public class Q9 {
         return -1;
     }
 }
+
+//dry run
+// import java.io.*;
+// import java.util.*;
+
+// public class Solution {
+    
+//     public static int peakEle(int a[])
+//     {
+//         int start=0;
+//         int end=a.length-1;
+        
+//         while(start<=end) //joprayt start chota ahe kiva equal hot nahit star ani end ekach elem var yet nahi topraynt
+//         {
+//            int mid=start+(end - start)/2 ;
+               
+//                if(a[mid] < a[mid+1])//mid ha lahan asel mid+1 peksha mhje mid cha pudcha ele peksha tr right side la jaaa
+//                {
+//                    start=mid+1;   //right side la janya sati strat point  la mid+1 banava
+//                }
+//             else {
+//                 end=mid -1;   //left la janya sati end point la update kara end point la mid-1 var nya
+//             }
+//         }
+        
+//         return start; //jenva start ani end ekach elem la point kartil tenva start la print kara
+        
+//     }
+
+//     public static void main(String[] args) {
+//      Scanner sc=new Scanner(System.in);
+//         int n=sc.nextInt();
+        
+//         int a[]=new int[n];
+//         for(int i=0; i<n; i++)
+//         {
+//             a[i]=sc.nextInt();
+//         }
+        
+//         System.out.println(peakEle(a));
+        
+//     }
+// }
