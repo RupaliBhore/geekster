@@ -94,7 +94,42 @@ public class Q9 {
     }
 }
 
-//dry run
+          //linear serach 0(n) tc
+// import java.io.*;
+// import java.util.*;
+
+// public class Solution {
+    
+//     static void peakEl(int a[],int n)   //print all peak elemet
+//     {
+//         
+//         for(int i=1; i<n-1; i++)
+//         {
+//             int curr=a[i];
+//             int left=a[i-1];
+//             int right=a[i+1];
+            
+//             if(curr>left && curr>right)
+//             {
+//                 System.out.print(i); //us peak elemt ki index print karo
+//             }
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc=new Scanner(System.in);
+//         int n=sc.nextInt();
+//         int a[]=new int[n];
+//         for(int i=0; i<n; i++)
+//         {
+//             a[i]=sc.nextInt();
+//         }
+        
+//         peakEl(a,n);
+//     }
+// }
+
+//dry run  binary sreach o(log n)
 // import java.io.*;
 // import java.util.*;
 
