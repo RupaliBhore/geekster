@@ -72,3 +72,151 @@ public class Q3 {
         scanner.close();
     }
 }
+
+
+// import java.util.Scanner;
+// import java.util.Arrays;
+// import java.util.Comparator;
+
+// public class CustomSortExample {
+//     public static void main(String[] args) {
+//         String[] numbers = {"5", "6", "2", "9","21","1"};   //output [1, 21, 2, 5, 6, 9]
+
+
+//         // Create a custom comparator using the specified syntax
+//         Comparator<String> myc = new Comparator<String>() {
+//             @Override
+//             public int compare(String a, String b) {
+//                 return (a + b).compareTo(b + a);  //positiv int asel tr acending madhe sort kara
+//             }
+//         };
+
+        // Sort using the custom comparator
+        Arrays.sort(numbers, myc);
+
+        // Print the sorted array
+        System.out.println(Arrays.toString(numbers));
+        
+        // Arrays.toString() is a utility method from the java.util package that converts the array numbers into a                   string           where each element is separated by commas. 
+        //showing something like [element1, element2, element3, ...], 
+    }
+}
+// The compareTo method compares these two concatenated strings lexicographically (dictionary order).
+
+// If (a + b) is lexicographically less than (b + a), compareTo will return a negative integer.
+
+// If (a + b) is lexicographically greater than (b + a), it will return a positive integer.
+
+// If they are equal, it will return zero.
+
+
+// a = "10"
+// b = "2"
+// Now, we evaluate:
+
+// Concatenations:
+
+// a + b → "102"
+// b + a → "210"
+
+// Now we compare "102" and "210":
+// Since "102" is lexicographically less than "210", the result of compareTo will be negative.
+   
+
+// Summary of compareTo Result:
+// If the first string is less than the second string, compareTo returns a negative integer.
+// If the first string is greater than the second string, it returns a positive integer.
+// If both strings are equal, it returns zero.
+
+
+
+//Initial Comparison:
+
+// Compare "5" and "6":
+// "5" + "6" = "56"
+// "6" + "5" = "65"
+// "56".compareTo("65") → returns negative (so "5" comes before "6").
+// Next Comparison:
+
+// Compare "6" and "2":
+// "6" + "2" = "62"
+// "2" + "6" = "26"
+// "62".compareTo("26") → returns positive (so "2" comes before "6").
+// Swap "6" and "2":
+// Copy
+// numbers = {"5", "2", "6", "9", "21", "1"}
+// Next Comparison:
+
+// Compare "6" and "9":
+// "6" + "9" = "69"
+// "9" + "6" = "96"
+// "69".compareTo("96") → returns negative (so "6" comes before "9").
+// Next Comparison:
+
+// Compare "9" and "21":
+// "9" + "21" = "921"
+// "21" + "9" = "219"
+// "921".compareTo("219") → returns positive (so "21" comes before "9").
+// Swap "9" and "21":
+// Copy
+// numbers = {"5", "2", "6", "21", "9", "1"}
+// Next Comparison:
+
+// Compare "9" and "1":
+// "9" + "1" = "91"
+// "1" + "9" = "19"
+// "91".compareTo("19") → returns positive (so "1" comes before "9").
+// Swap "9" and "1":
+// Copy
+// numbers = {"5", "2", "6", "21", "1", "9"}
+// Second Pass (to ensure sorting):
+// The sorting algorithm may require multiple passes through the array to ensure all elements are in the correct order.
+
+// First Comparison:
+
+// Compare "5" and "2":
+// "5" + "2" = "52"
+// "2" + "5" = "25"
+// "52".compareTo("25") → returns positive (so "2" comes before "5").
+// Swap "5" and "2":
+// Copy
+// numbers = {"2", "5", "6", "21", "1", "9"}
+// Next Comparison:
+
+// Compare "5" and "6":
+// "5" + "6" = "56"
+// "6" + "5" = "65"
+// "56".compareTo("65") → returns negative (no swap).
+// Next Comparison:
+
+// Compare "6" and "21":
+// "6" + "21" = "621"
+// "21" + "6" = "216"
+// "621".compareTo("216") → returns positive (so "21" comes before "6").
+// Swap "6" and "21":
+// Copy
+// numbers = {"2", "5", "21", "6", "1", "9"}
+// Next Comparison:
+
+// Compare "6" and "1":
+// "6" + "1" = "61"
+// "1" + "6" = "16"
+// "61".compareTo("16") → returns positive (so "1" comes before "6").
+// Swap "6" and "1":
+// Copy
+// numbers = {"2", "5", "21", "1", "6", "9"}
+// Next Comparison:
+
+// Compare "6" and "9":
+// "6" + "9" = "69"
+// "9" + "6" = "96"
+// "69".compareTo("96") → returns negative (no swap).
+// Final Pass:
+// Final Sorting:
+// Continue comparing until no more swaps are needed.
+// Eventually, you will arrive at the final sorted order.
+// Final Sorted Array:
+// After all comparisons and swaps, the final sorted array will be:
+
+// Copy
+// numbers = {"1", "2", "21", "5", "6", "9"}
