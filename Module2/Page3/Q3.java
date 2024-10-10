@@ -37,41 +37,88 @@ import java.util.*;
 public class Q3 {
 
     public static void main(String[] args) {
-       Scanner scanner = new Scanner(System.in);
-
-        // Input the size of the array
-        int N = scanner.nextInt();
-        String[] arr = new String[N];
-
-        // Input the elements of the array
-        for (int i = 0; i < N; i++) {
-            arr[i] = scanner.next();
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        
+        String[] A = new String[n];
+        
+        for(int i=0; i<n; i++){
+            int val = scn.nextInt();
+            A[i]= "" + val;  // add "" for converting in string 
         }
+        
 
-        // Custom sort the array using a comparator
-        Arrays.sort(arr, new Comparator<String>() {
+        
+        
+                // Create a custom comparator using the specified syntax
+        Comparator<String> myc = new Comparator<String>() {
+            @Override
             public int compare(String a, String b) {
-                String order1 = a + b;
-                String order2 = b + a;
-                return order1.compareTo(order2);
+                return (a + b).compareTo(b + a);  //positiv int asel tr acending madhe sort kara
             }
-        });
-
-        // If the largest number is '0', the result should be '0'
-        if (arr[0].equals("0")) {
-            System.out.println("0");
-        } else {
-            // Concatenate all numbers to form the smallest number
-            StringBuilder smallestNumber = new StringBuilder();
-            for (String num : arr) {
-                smallestNumber.append(num);
-            }
-            System.out.println(smallestNumber.toString());
+        };
+        
+        
+        Arrays.sort(A, myc);
+        for(int i=0; i<n; i++){
+            System.out.print(A[i]);
         }
-
-        scanner.close();
+        
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+// import java.io.*;
+// import java.util.*;
+
+// public class Q3 {
+
+//     public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+
+//         // Input the size of the array
+//         int N = scanner.nextInt();
+//         String[] arr = new String[N];
+
+//         // Input the elements of the array
+//         for (int i = 0; i < N; i++) {
+//             arr[i] = scanner.next();
+//         }
+
+//         // Custom sort the array using a comparator
+//         Arrays.sort(arr, new Comparator<String>() {
+//             public int compare(String a, String b) {
+//                 String order1 = a + b;
+//                 String order2 = b + a;
+//                 return order1.compareTo(order2);
+//             }
+//         });
+
+//         // If the largest number is '0', the result should be '0'
+//         if (arr[0].equals("0")) {
+//             System.out.println("0");
+//         } else {
+//             // Concatenate all numbers to form the smallest number
+//             StringBuilder smallestNumber = new StringBuilder();
+//             for (String num : arr) {
+//                 smallestNumber.append(num);
+//             }
+//             System.out.println(smallestNumber.toString());
+//         }
+
+//         scanner.close();
+//     }
+// }
 
 
 // import java.util.Scanner;
