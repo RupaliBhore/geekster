@@ -60,7 +60,43 @@ public class Q8 {
             System.out.print(A[i]);
         }
         
+
+        ///best
+import java.io.*;
+import java.util.*;
+
+public class Q8 {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
         
+        String[] A = new String[n];
+        
+        for(int i = 0; i < n; i++) {
+            int val = scn.nextInt();
+            A[i] = "" + val;  // Convert int to String
+        }
+
+        // Create a custom comparator
+        Comparator<String> myc = new Comparator<String>() {
+            @Override
+            public int compare(String a, String b) {
+                String x = a + b;
+                String y = b + a;
+                
+                // Use compareTo for string comparison
+                return y.compareTo(x); // For descending order
+            }
+        };
+
+        Arrays.sort(A, myc);
+        for(int i = 0; i < n; i++) {
+            System.out.print(A[i]);
+        }
+    }
+}
+
     }
 }
 
