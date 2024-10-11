@@ -31,10 +31,34 @@
 
 // 2 3 5 4 1 7
 
+class Solution {   //for leetcode handle case where your array length can be 3
+    public int[] shuffle(int[] nums, int n) {
+
+        int i = 0;   // Pointer for output array
+        int j = 0;   // Pointer for the first half (x1, x2, ..., xn)
+        int k = n;   // Pointer for the second half (y1, y2, ..., yn)
+        int ans[] = new int[2 * n];  // Result array of size 2n
+
+        while (i < 2 * n) {
+            // Add elements from the first half
+            ans[i] = nums[j];
+            j++;
+            i++;
+
+            // Add elements from the second half
+            ans[i] = nums[k];
+            k++;
+            i++;
+        }
+
+        return ans;
+    }
+}
+
 
 import java.util.*;
 
-public class Q4 {
+public class Q4 {    //best for hacrrank
 
     public static void main(String[] args) {       
        Scanner sc=new Scanner(System.in);
