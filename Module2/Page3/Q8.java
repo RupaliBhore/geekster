@@ -36,74 +36,74 @@
 
 
 //finded 
-// import java.util.*;
+import java.util.*;
 
-// public class Q8 {
+public class Q8 {
 
-//     public static void main(String[] args) {
-//      Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
 
-//         // Input the size of the array
-//         int N = scanner.nextInt();
-//         int[] arr = new int[N];
+        // Input the size of the array
+        int N = scanner.nextInt();
+        int[] arr = new int[N];
 
-//         // Input the elements of the array
-//         for (int i = 0; i < N; i++) {
-//             arr[i] = scanner.nextInt();
-//         }
-
-//         // Kadane's Algorithm to find the maximum sum subarray
-//         int maxCurrent = arr[0];
-//         int maxGlobal = arr[0];
-
-//         for (int i = 1; i < N; i++) {
-//             maxCurrent = Math.max(arr[i], maxCurrent + arr[i]);
-//             if (maxCurrent > maxGlobal) {
-//                 maxGlobal = maxCurrent;
-//             }
-//         }
-
-//         // Output the result
-//         System.out.println(maxGlobal);
-
-//         scanner.close();
-//     }
-// }
-
-
-//cases pass nahi
-import java.util.Scanner;
-
-public class Solution {
-
-    public static void main(String[] args) {    //brut force app
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt(); // Input array size
-        
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt(); // Input array elements
+        // Input the elements of the array
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
         }
 
-        int maxSum = Integer.MIN_VALUE; // Initialize maxSum to a very small value
+        // Kadane's Algorithm to find the maximum sum subarray
+        int maxCurrent = arr[0];
+        int maxGlobal = arr[0];
 
-        // Brute force approach to find the maximum subarray sum
-        for (int i = 0; i < n; i++) {
-            int sum = 0; // Reset sum for each new starting index i
-            for (int j = i; j < n; j++) {
-                sum += a[j]; // Accumulate sum for subarray a[i...j]
-
-                // Update maxSum if a larger sum is found
-                if (sum > maxSum) {
-                    maxSum = sum;
-                }
+        for (int i = 1; i < N; i++) {
+            maxCurrent = Math.max(arr[i], maxCurrent + arr[i]);
+            if (maxCurrent > maxGlobal) {
+                maxGlobal = maxCurrent;
             }
         }
 
-        System.out.println(maxSum); // Output the maximum subarray sum
-        sc.close();
+        // Output the result
+        System.out.println(maxGlobal);
+
+        scanner.close();
     }
 }
+
+
+//cases pass nahi
+//import java.util.Scanner;
+
+// public class Solution {
+
+//     public static void main(String[] args) {    //brut force app
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt(); // Input array size
+        
+//         int[] a = new int[n];
+//         for (int i = 0; i < n; i++) {
+//             a[i] = sc.nextInt(); // Input array elements
+//         }
+
+//         int maxSum = Integer.MIN_VALUE; // Initialize maxSum to a very small value
+
+//         // Brute force approach to find the maximum subarray sum
+//         for (int i = 0; i < n; i++) {
+//             int sum = 0; // Reset sum for each new starting index i
+//             for (int j = i; j < n; j++) {
+//                 sum += a[j]; // Accumulate sum for subarray a[i...j]
+
+//                 // Update maxSum if a larger sum is found
+//                 if (sum > maxSum) {
+//                     maxSum = sum;
+//                 }
+//             }
+//         }
+
+//         System.out.println(maxSum); // Output the maximum subarray sum
+//         sc.close();
+//     }
+// }
 
 
 
