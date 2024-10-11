@@ -71,6 +71,7 @@
 // }
 
 
+//cases pass nahi
 import java.util.Scanner;
 
 public class Solution {
