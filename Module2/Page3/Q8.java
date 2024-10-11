@@ -71,10 +71,43 @@
 // }
 
 
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {    //brut force app
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // Input array size
+        
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt(); // Input array elements
+        }
+
+        int maxSum = Integer.MIN_VALUE; // Initialize maxSum to a very small value
+
+        // Brute force approach to find the maximum subarray sum
+        for (int i = 0; i < n; i++) {
+            int sum = 0; // Reset sum for each new starting index i
+            for (int j = i; j < n; j++) {
+                sum += a[j]; // Accumulate sum for subarray a[i...j]
+
+                // Update maxSum if a larger sum is found
+                if (sum > maxSum) {
+                    maxSum = sum;
+                }
+            }
+        }
+
+        System.out.println(maxSum); // Output the maximum subarray sum
+        sc.close();
+    }
+}
 
 
 
-// Discussed one
+
+// Discussed one   //kedanse algo
 
 
 import java.util.*;
