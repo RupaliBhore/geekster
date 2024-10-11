@@ -71,8 +71,54 @@
 
 
 
+// o(n2)
+import java.util.Scanner;
+
+public class ZeroSumSubarray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the array
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        // Check if there is a subarray with sum zero
+        boolean hasZeroSumSubarray = hasZeroSumSubarray(array);
+        System.out.println(hasZeroSumSubarray);
+
+        scanner.close();
+    }
+
+    public static boolean hasZeroSumSubarray(int[] array) {
+        // Iterate over all possible subarrays
+        for (int i = 0; i < array.length; i++) {
+            int sum = 0;
+
+            // Calculate the sum of subarray starting at i
+            for (int j = i; j < array.length; j++) {
+                sum += array[j];
+
+                // If the sum becomes zero, return true
+                if (sum == 0) {
+                    return true;
+                }
+            }
+        }
+
+        // If no subarray with zero sum is found, return false
+        return false;
+    }
+}
 
 
+
+
+//0(n3)
 
 // Discussed
 import java.util.*;
