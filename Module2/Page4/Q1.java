@@ -29,6 +29,56 @@
 
 // 4 subarray with sum equals to 0 {1 2 -2 -1 0} {2 -2} {1 2 -2 -1} {0}
 
+import java.util.Scanner;
+
+public class ZeroSumSubarrays {               //o(n)
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the array
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        // Count the number of zero-sum subarrays
+        int result = countZeroSumSubarrays(array);
+        System.out.println(result);
+
+        scanner.close();
+    }
+
+    public static int countZeroSumSubarrays(int[] array) {
+        int zeroSumCount = 0;
+
+        // Loop over all possible starting points of subarrays
+        for (int i = 0; i < array.length; i++) {
+            int currentSum = 0;
+
+            // Loop over all possible ending points of subarrays starting from i
+            for (int j = i; j < array.length; j++) {
+                // Calculate sum of subarray from index i to j
+                currentSum += array[j];
+
+                // If the sum is zero, increment the count
+                if (currentSum == 0) {
+                    zeroSumCount++;
+                }
+            }
+        }
+
+        return zeroSumCount;
+    }
+}
+
+
+
+
+
+
 import java.util.*;
 
 public class Q1 {
