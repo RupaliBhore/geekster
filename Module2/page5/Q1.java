@@ -32,3 +32,49 @@
 
 // After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
 
+//jaha pe zero he usake next bhi 0 add karo par original aaray ke length change nahi honi chaiye koi elemt chutaha he to thik he par length fix rahegi
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+   
+    public static void duplicateZeros(int[] arr) {
+       int n = arr.length;
+        
+        // Traverse the array
+        for (int i = 0; i < n; i++) {
+            // If a zero is encountered
+            if (arr[i] == 0) {
+                // Shift elements to the right, starting from the end
+                for (int j = n - 1; j > i; j--) {
+                    arr[j] = arr[j - 1];
+                }
+                // Duplicate the zero by setting the next element to zero
+                i++;  // Skip over the next position as it contains the duplicated zero
+            }
+        }
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input array size
+        int N = scanner.nextInt();
+        int[] arr = new int[N];
+        
+        // Input array elements
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        
+        // Perform the duplication of zeros
+        duplicateZeros(arr);
+        
+        // Print the modified array
+        for (int i = 0; i < N; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
