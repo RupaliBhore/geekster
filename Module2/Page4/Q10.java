@@ -47,6 +47,55 @@
 // Explanation 1
 
 // Your function should return k = 7, with the first seven elements of nums being 0, 0, 1, 1, 2, 3 and 3 respectively. It does not matter what you leave beyond the returned k (hence they are underscores).
+import java.util.*;
+public class Solution {
+    
+    //dilela aaray sorted asel ani tyamdhun asel elemet gyache ki te 2 vela ale pahijt 1 kiva 2 vela 
+    //jastit jast elemet 2 vela ala pahije
+//We will use two pointers: one to iterate over the array (i) and one to track where to place the next valid element ////index.
+//array sorted ahe tr pahile 2 elemt ahe tase gheu ani arrray 2 indx pausn start karu cheack karayala
+
+    public static int removeDuplicates(int[] nums) {
+        int n = nums.length;
+        
+        if (n <= 2) {
+            return n; // No need to process if array length is 2 or less
+        }
+                                                                                   //0 1 2 3 4 5
+                                                                                  ///1 1 1 2 2 3
+
+        int index = 2; // Start placing elements from the third position             
+        for (int i = 2; i < n; i++) {                            //2<6 //3<6 //4<6 //5<6 6<6
+            // Place element at index if it's different from the one at index-2
+            if (nums[i] != nums[index - 2]) {                   //1!=1 f i++3 //2!=1(3-2) t  //2!=1(2-2) //3!=1(3-2)
+                nums[index] = nums[i];                        //2 //2 //3
+                index++;             //3 //4 //5
+            }
+            //i++4 //5 //6
+        }
+        
+        return index; // The value of index is the number of valid elements (k)
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] nums = new int[n];
+        for (int i = 0; i < n; i++) {
+            nums[i] = sc.nextInt();
+        }
+
+        int k = removeDuplicates(nums);
+        System.out.println(k);
+
+        // Print the first k elements, which are the result
+        // for (int i = 0; i < k; i++) {
+        //     System.out.print(nums[i] + " ");
+        // }
+    }
+}
+
+
 
 
 import java.util.*;
