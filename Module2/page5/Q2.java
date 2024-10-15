@@ -106,3 +106,55 @@ public static void main(String[] args) {
         }
     }
 }
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    static void target(int a[],int k)
+    {
+        int n=a.length;
+        int target=k;
+        int i=0;
+        int j=n-1;
+        while(i<j)  //agar yaha = sing lagate to 4+4 yese piar bhi aayege so
+        {
+            if(a[i]+a[j]== target)
+            {
+                System.out.println(i+" "+j);
+                i++;
+                j--;
+                
+            }else if(a[i]+a[j] < target )  //agar pair ka sum target se chota he to
+            {
+                i++;                       //left wale elemet badao
+            }
+            
+            else
+            {
+                j--;               //aur right wale badao
+            }
+            
+        }
+        
+
+        
+           
+    }
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        int a[]=new int[n];
+        for(int i=0; i<n; i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        
+        int k=sc.nextInt();
+        
+        target(a,k);
+    }
+}
