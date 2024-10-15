@@ -101,9 +101,74 @@
 // }
 
 
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class TwoPointerUniquePairs {
+    public static void findPairs(int[] arr, int target) {    //2 pointer approch o(n log n) bcoz of sor()
+        // Sort the array
+        Arrays.sort(arr);
+
+        // Initialize two pointers
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+
+            // If we found a pair
+            if (sum == target) {
+                System.out.println(arr[left] + " " + arr[right]);
+
+                // Move both pointers to avoid duplicates
+                int currentLeft = arr[left];
+                int currentRight = arr[right];
+
+                // Increment left pointer while next element is the same
+                while (left < right && arr[left] == currentLeft) {
+                    left++;
+                }
+
+                // Decrement right pointer while next element is the same
+                while (left < right && arr[right] == currentRight) {
+                    right--;
+                }
+            }
+            // If sum is less than target, move the left pointer to the right
+            else if (sum < target) {
+                left++;
+            }
+            // If sum is greater than target, move the right pointer to the left
+            else {
+                right--;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input size of the array
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        // Input array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        // Input the target sum
+        int target = scanner.nextInt();
+
+        // Find and print unique pairs
+        findPairs(arr, target);
+    }
+}
 
 
-// finded
+
+
+// finded                                                    //o(n log n) bcoz of sor()
 import java.util.*;
 
 public class Q3 {
@@ -127,7 +192,7 @@ public class Q3 {
         
         // Convert the set to a list and sort it
         List<List<Integer>> sortedPairs = new ArrayList<>(pairs);
-        sortedPairs.sort(Comparator.comparingInt(a -> a.get(0)));
+        sortedPairs.sort(Comparator.comparingInt(a -> a.get(0)));     //sort()
 
         // Print the pairs
         for (List<Integer> pair : sortedPairs) {
