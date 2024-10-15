@@ -41,6 +41,100 @@
 
 // The distinct triplets are [-1,0,1] and [-1,-1,2].
 
+// Sorting takes O(n log n).
+// Each triplet is found in linear time O(n^2) (due to the nested loops).
+// Total complexity: O(n^2).
+
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ThreeSum {
+
+    public static List<List<Integer>> threeSum(int[] nums) {     ///// -2 0 2 4 -2 -8
+        List<List<Integer>> ans = new ArrayList<>();
+
+        // Sort the array
+        Arrays.sort(nums);   //-8 -2 -2 0 2 4
+
+        for (int i = 0; i < nums.length - 2; i++) {  //-8 -2 0 2 4
+            // Skip duplicate elements for i
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+                                                    
+
+            int j = i + 1;
+            int k = nums.length - 1;
+
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+
+                if (sum == 0) {
+                    // Found a triplet with zero sum
+                    ans.add(Arrays.asList(nums[i], nums[j], nums[k])); //asList() array la list madhe convert karate
+
+                    // Skip duplicate elements for j
+                    while (j < k && nums[j] == nums[j + 1]) {
+                        j++;
+                    }
+
+                    // Skip duplicate elements for k
+                    while (j < k && nums[k] == nums[k - 1]) {
+                        k--;
+                    }
+
+                    // Move the pointers
+                    j++;
+                    k--;
+                } else if (sum < 0) {
+                    // Sum is less than zero, increment j to increase the sum
+                    j++;
+                } else {
+                    // Sum is greater than zero, decrement k to decrease the sum
+                    k--;
+                }
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input size of the array
+        int N = scanner.nextInt();
+        int[] arr = new int[N];
+
+        // Input array elements
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        // Find and print triplets
+        List<List<Integer>> result = threeSum(arr);
+
+        // Print the result
+        // for (List<Integer> triplet : result) {    //[-2, -2, 4]
+        //                                           //[-2, 0, 2]  ashaperakre ouput print hoil
+        //     System.out.println(triplet);
+        // }
+        
+        
+         // Print the result without []
+        for (List<Integer> triplet : result) {
+            for (int num : triplet) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+
 // fINDED
 
 // import java.util.*;
