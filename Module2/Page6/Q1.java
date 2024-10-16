@@ -103,6 +103,37 @@ public class Q1 {
     }
 }
 
+  // Check if the total sum is divisible by the number of teams
+        if (totalSkillSum % (N / 2) != 0) {
+            return -1; // It's not possible to form teams with equal total skill
+        }
+Purpose: of this if condition
+This condition checks if the total sum of skill levels (totalSkillSum) can be evenly divided among the teams, such that each team has the same total skill.
+Explanation:
+totalSkillSum % (N / 2) != 0:
+
+totalSkillSum is the sum of the skill levels of all players.
+N is the number of players.
+N / 2 represents the number of pairs (or teams) you need to form, assuming that players are paired into two teams. So, the total skill sum must be divisible by the number of pairs (teams) in order to equally distribute the skill between them.
+The expression totalSkillSum % (N / 2) checks whether the total skill sum can be evenly divided by the number of pairs.
+If the result is not 0 (i.e., totalSkillSum % (N / 2) != 0):
+
+It means that the total skill sum cannot be evenly split into teams with equal skill levels.
+If this condition is true, the function returns -1, indicating that it's impossible to form teams with equal total skill.
+Example: Let's say you have N = 6 players with a totalSkillSum = 18. The number of pairs (teams) would be N / 2 = 3. Now, check if 18 % 3 == 0. Since this is true, we can potentially form teams with equal skill levels.
+
+If, for example, totalSkillSum was something like 19, 19 % 3 != 0 would be true, so it would return -1 because 19 can't be evenly divided among 3 pairs.
+
+Conclusion:
+This check ensures that it's mathematically possible to form teams where the sum of skill levels in each team is equal. If it’s not possible, the function returns -1 immediately without wasting time on further calculations.
+
+
+
+
+
+
+
+
 
 // The Java code provided aims to solve a problem where we need to form two teams of equal total skill from a list of player skill levels. Here’s a breakdown of how the code works:
 
