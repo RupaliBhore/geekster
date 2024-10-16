@@ -29,6 +29,52 @@
 
 // he unique elements are [1,3], and the sum is 4.
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class UniqueSum {     //using hashmap
+    public static int sumOfUnique(int[] nums) {
+        HashMap<Integer, Integer> countMap = new HashMap<>();
+        
+        // Count occurrences of each element
+        for (int num : nums) {
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+        }
+        
+        // Sum up elements that occur exactly once
+        int sum = 0;
+        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+            if (entry.getValue() == 1) {
+                sum += entry.getKey();
+            }
+        }
+        
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input size of the array
+        int N = scanner.nextInt();
+        int[] nums = new int[N];
+        
+        // Input array elements
+        for (int i = 0; i < N; i++) {
+            nums[i] = scanner.nextInt();
+        }
+        
+        // Calculate and print the sum of unique elements
+        int result = sumOfUnique(nums);
+        System.out.println(result);
+        
+        scanner.close();
+    }
+}
+
+
+//using freq array
 
 import java.util.*;
 
