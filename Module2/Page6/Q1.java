@@ -102,3 +102,35 @@ public class Q1 {
         return chemistrySum;
     }
 }
+
+
+// The Java code provided aims to solve a problem where we need to form two teams of equal total skill from a list of player skill levels. Here’s a breakdown of how the code works:
+
+// Input Reading: The code starts by reading the number of players (N) and their respective skill levels into an array skill.
+
+// Sorting: The skill array is sorted in ascending order. Sorting helps in efficiently applying the two-pointer technique to find pairs of skills that sum up to a target value.
+
+// Total Skill Sum Calculation: The total sum of all skill levels (totalSkillSum) is calculated.
+
+// Divisibility Check: It checks if totalSkillSum can be evenly divided by N/2. This ensures that it's possible to form two teams with equal total skill.
+
+// Target Sum Calculation: If divisible, targetSum is calculated as totalSkillSum / (N / 2), which represents the desired sum for each team.
+
+// Two-pointer Technique: Two pointers (left starting at the beginning and right starting at the end) are used to find pairs of skill levels that sum up to targetSum. If found, their product is added to chemistrySum.
+
+// Result: If all pairs are found successfully and form teams with equal total skill, chemistrySum is returned. Otherwise, -1 is returned indicating that it's not possible to form such teams.
+
+// Here’s a quick overview of how the method calculateChemistrySum works:
+
+// It uses sorting and the two-pointer technique to efficiently find pairs of skill levels that sum up to targetSum.
+// If a valid pair is found (currentSum == targetSum), their product is added to chemistrySum.
+// If no valid pairs are found or the total sum cannot be evenly divided into two equal parts, it returns -1.
+// The overall complexity of the algorithm is dominated by the sorting step, which is O(N log N), followed by the linear scan with two pointers, which is O(N). This makes the solution efficient and suitable for reasonably large values of N.
+
+// The code ensures that all edge cases, such as non-divisible total sums or insufficient pairs to form teams, are handled by returning -1 appropriately.
+
+
+
+
+
+
