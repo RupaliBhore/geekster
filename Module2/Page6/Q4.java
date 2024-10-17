@@ -48,9 +48,58 @@
 // Explanation 1
 
 // There is no index that satisfies the conditions in the problem statement.
+                                   //0(n2)
+import java.util.Scanner;
+
+public class PivotIndexBruteForce {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the array
+        int n = scanner.nextInt();
+        int[] nums = new int[n];
+
+        // Read the elements of the array
+        for (int i = 0; i < n; i++) {
+            nums[i] = scanner.nextInt();
+        }
+
+        // Compute the pivot index using brute-force approach
+        int result = findPivotIndexBruteForce(nums);
+        System.out.println(result);
+
+        scanner.close();
+    }
+
+    public static int findPivotIndexBruteForce(int[] nums) {
+        // Iterate over each element to check if it is the pivot index
+        for (int i = 0; i < nums.length; i++) {
+            int leftSum = 0;
+            int rightSum = 0;
+
+            // Calculate the sum of elements to the left of the current index
+            for (int j = 0; j < i; j++) {
+                leftSum += nums[j];
+            }
+
+            // Calculate the sum of elements to the right of the current index
+            for (int j = i + 1; j < nums.length; j++) {
+                rightSum += nums[j];
+            }
+
+            // Check if left sum is equal to right sum
+            if (leftSum == rightSum) {
+                return i;
+            }
+        }
+
+        // Return -1 if no pivot index is found
+        return -1;
+    }
+}
 
 
-//fINDED
+//fINDED       ///0(n)
 // import java.util.*;
 
 // public class Q4 {
