@@ -106,26 +106,26 @@ public class Solution {
 
 // Discussed One
 
-import java.util.*;
+// import java.util.*;
 
-public class Q10 {
-public static void main (String[] args) {
-Scanner scn = new Scanner(System.in);
-String s = scn.next();
-//freq
-int [] freq = new int [26];
-for(int i = 0; i < s. length(); i++){
-char ch = s.charAt(i);
-int idx = ch - 'a';
-freq[idx] = freq[idx] + 1;
-}
-//max
-int maxIdx = 0;
-for(int i = 0; i < 26; i++) {
-if(freq[maxIdx] < freq[i]) {
-maxIdx = i;
-}
-}
-System.out.println((char) ('a' + maxIdx));
-}
-}
+// public class Q10 {
+// public static void main (String[] args) {
+// Scanner scn = new Scanner(System.in);
+// String s = scn.next();
+// //freq
+// int [] freq = new int [26];
+// for(int i = 0; i < s. length(); i++){
+// char ch = s.charAt(i);
+// int idx = ch - 'a';
+// freq[idx] = freq[idx] + 1;
+// }
+// //max
+// int maxIdx = 0;
+// for(int i = 0; i < 26; i++) {
+// if(freq[maxIdx] < freq[i]) {
+// maxIdx = i;
+// }
+// }
+// System.out.println((char) ('a' + maxIdx));
+// }
+// }
