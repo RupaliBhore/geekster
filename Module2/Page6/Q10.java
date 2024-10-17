@@ -20,6 +20,43 @@
 
 // c
 
+import java.util.Scanner;
+
+public class Solution {
+
+    public static char maxOccurrence(String str) {
+        // Array to store frequency of each character
+        int[] freq = new int[26]; // Since only lowercase alphabets a-z
+        
+        // Iterate through the string and update the frequency array
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            freq[ch - 'a']++; // 'a' is at index 0, 'b' at index 1, etc.
+        }
+        
+        // Find the character with the maximum frequency
+        int maxFreq = 0;
+        char maxChar = 'a';
+        
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] > maxFreq) {
+                maxFreq = freq[i];
+                maxChar = (char) (i + 'a'); // Convert index back to character
+            }
+        }
+        
+        return maxChar;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        
+        // Call the function to get the most frequent character
+        char result = maxOccurrence(str);
+        System.out.println(result);
+    }
+}
 
 
 //Finded
