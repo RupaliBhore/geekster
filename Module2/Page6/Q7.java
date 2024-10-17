@@ -70,3 +70,43 @@ public class Q7 {
         return maxAltitude;
     }
 }
+
+import java.util.Scanner;
+
+public class HighestAltitude {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the size of the array
+        int n = scanner.nextInt();
+        int[] gain = new int[n];
+        
+        // Read the elements of the gain array
+        for (int i = 0; i < n; i++) {
+            gain[i] = scanner.nextInt();
+        }
+        
+        // Calculate the highest altitude
+        int highestAltitude = findHighestAltitude(gain);
+        
+        // Print the highest altitude
+        System.out.println(highestAltitude);
+        
+        scanner.close();
+    }
+    
+    public static int findHighestAltitude(int[] gain) {   //-5 1 5 0 -7
+        int currentAltitude = 0;  //
+        int highestAltitude = 0;  //
+        
+        for (int i = 0; i < gain.length; i++) {
+            currentAltitude += gain[i];   //-5  //-5+1=-4 //-4+5=1 //1+0=1 //1 + -7
+            if (currentAltitude > highestAltitude) { //-5 >0 f -4>0 f //1>0 t //1>0 t //-6>1 f
+                highestAltitude = currentAltitude; //1 //1
+            }
+        }
+        
+        return highestAltitude; // 1 
+    }
+}
