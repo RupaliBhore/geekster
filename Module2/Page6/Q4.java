@@ -134,7 +134,7 @@ public class PivotIndexBruteForce {
 //         // Find the pivot index
 //         for (int i = 0; i < nums.length; i++) {
 //             // Right sum calculation
-//             int rightSum = totalSum - leftSum - nums[i];
+//             int rightSum = totalSum - leftSum - nums[i];  //ekdach calculate hoil upade nahi honar upadate fkat leftsum ani n[i] hoil
 
 //             if (leftSum == rightSum) {
 //                 return i;
@@ -147,6 +147,45 @@ public class PivotIndexBruteForce {
 //         return -1;
 //     }
 // }
+
+
+dry run
+Iteration 1 (i = 0):
+
+nums[i] = 1
+Calculate rightSum = totalSum - leftSum - nums[i] = 28 - 0 - 1 = 27
+Check if leftSum == rightSum: 0 == 27 (false)
+Update leftSum: leftSum = leftSum + nums[i] = 0 + 1 = 1
+Iteration 2 (i = 1):
+
+nums[i] = 7
+Calculate rightSum = totalSum - leftSum - nums[i] = 28 - 1 - 7 = 20
+Check if leftSum == rightSum: 1 == 20 (false)
+Update leftSum: leftSum = leftSum + nums[i] = 1 + 7 = 8
+Iteration 3 (i = 2):
+
+nums[i] = 3
+Calculate rightSum = totalSum - leftSum - nums[i] = 28 - 8 - 3 = 17
+Check if leftSum == rightSum: 8 == 17 (false)
+Update leftSum: leftSum = leftSum + nums[i] = 8 + 3 = 11
+Iteration 4 (i = 3):
+
+nums[i] = 6
+Calculate rightSum = totalSum - leftSum - nums[i] = 28 - 11 - 6 = 11
+Check if leftSum == rightSum: 11 == 11 (true)
+At this point, since leftSum is equal to rightSum, index i = 3 is the pivot index. The function returns 3.
+
+Final Output:
+The function returns 3, which is the index where the sum of elements to the left of the index is equal to the sum of elements to the right of it.
+
+Summary of Variables during Each Iteration:
+Iteration (i)	nums[i]	leftSum	rightSum	leftSum == rightSum	Pivot Index?
+0	1	0	27	No	No
+1	7	1	20	No	No
+2	3	8	17	No	No
+3	6	11	11	Yes	Yes (return 3)
+Conclusion:
+The pivot index is found at position 3, and the function returns 3.
 
 
 // /Discussed
