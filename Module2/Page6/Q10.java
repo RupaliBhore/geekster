@@ -59,6 +59,49 @@ public class Solution {
 }
 
 
+
+// import java.util.HashMap;
+// import java.util.Scanner;
+
+// public class Solution {       //with hashmap
+
+//     public static char maxOccurrence(String str) {
+//         // HashMap to store frequency of each character
+//         HashMap<Character, Integer> freqMap = new HashMap<>();
+        
+//         // Iterate through the string and update the frequency map
+//         for (int i = 0; i < str.length(); i++) {
+//             char ch = str.charAt(i);
+//             // Update the frequency in the map
+//             freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
+//         }
+        
+//         // Find the character with the maximum frequency
+//         char maxChar = 'a';
+//         int maxFreq = 0;
+        
+//         for (char ch : freqMap.keySet()) {
+//             int frequency = freqMap.get(ch);
+//             if (frequency > maxFreq) {
+//                 maxFreq = frequency;
+//                 maxChar = ch;
+//             }
+//         }
+        
+//         return maxChar;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         String str = sc.nextLine();
+        
+//         // Call the function to get the most frequent character
+//         char result = maxOccurrence(str);
+//         System.out.println(result);
+//     }
+// }
+
+
 //Finded
 // import java.util.*;
 
