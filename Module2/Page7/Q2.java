@@ -22,6 +22,47 @@
 // 1
 
 
+///1  with remove last digit and count freq of that digit   //mycode
+
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input integer
+        long num = sc.nextLong();
+        
+        // Array to store frequency of each digit (0-9)
+        int[] frequency = new int[10];
+        
+        // Extract digits and count their frequency
+        while (num > 0) {
+            int digit = (int)(num % 10);  // Get the last digit
+            frequency[digit]++;           // Increment frequency of that digit
+            num /= 10;                    // Remove the last digit
+        }
+        
+        // Find the digit with the highest frequency
+        int maxFreq = 0;
+        int mostFrequentDigit = 0;
+        
+        for (int i = 0; i < 10; i++) {
+            if (frequency[i] > maxFreq) {
+                maxFreq = frequency[i];
+                mostFrequentDigit = i;
+            }
+        }
+        
+        // Print the digit with the highest frequency
+        System.out.println(mostFrequentDigit);
+    }
+}
+
+
+
+
+
 
 import java.util.*;
 
@@ -66,3 +107,83 @@ public class Q2 {
         return mostFrequentDigit;
     }
 }
+
+
+///1  with remove last digit and count freq of that digit
+
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input integer
+        long num = sc.nextLong();
+        
+        // Array to store frequency of each digit (0-9)
+        int[] frequency = new int[10];
+        
+        // Extract digits and count their frequency
+        while (num > 0) {
+            int digit = (int)(num % 10);  // Get the last digit
+            frequency[digit]++;           // Increment frequency of that digit
+            num /= 10;                    // Remove the last digit
+        }
+        
+        // Find the digit with the highest frequency
+        int maxFreq = 0;
+        int mostFrequentDigit = 0;
+        
+        for (int i = 0; i < 10; i++) {
+            if (frequency[i] > maxFreq) {
+                maxFreq = frequency[i];
+                mostFrequentDigit = i;
+            }
+        }
+        
+        // Print the digit with the highest frequency
+        System.out.println(mostFrequentDigit);
+    }
+}
+
+
+
+
+//number la array madhe convert karaun
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input integer
+        long num = sc.nextLong();
+        
+        // Convert number to string, then to character array
+        String numStr = Long.toString(num);
+        char[] digits = numStr.toCharArray();
+        
+        // Array to store frequency of each digit (0-9)
+        int[] frequency = new int[10];
+        
+        // Traverse through the digit array and count frequency of each digit
+        for (char digit : digits) {
+            frequency[digit - '0']++; // Convert char digit to int and increment its frequency
+        }
+        
+        // Find the digit with the highest frequency
+        int maxFreq = 0;
+        int mostFrequentDigit = 0;
+        
+        for (int i = 0; i < 10; i++) {
+            if (frequency[i] > maxFreq) {
+                maxFreq = frequency[i];
+                mostFrequentDigit = i;
+            }
+        }
+        
+        // Print the digit with the highest frequency
+        System.out.println(mostFrequentDigit);
+    }
+}
+
