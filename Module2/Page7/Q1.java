@@ -27,6 +27,56 @@
 
 // The characters that appear in s are 'a', 'b', and 'c'. All characters occur 2 times in s.
 
+                           //my code
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+public class GoodStringChecker {
+    
+    public static boolean isGoodString(String s) {
+        // Map to store the frequency of each character
+        Map<Character, Integer> frequencyMap = new HashMap<>();
+        
+        // Count frequencies of each character
+        for (char c : s.toCharArray()) {
+            frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);
+        }
+        
+        // Set to store unique frequencies
+        Set<Integer> frequencySet = new HashSet<>(frequencyMap.values());
+        
+        // If all characters have the same frequency, there should be only one unique frequency
+        return frequencySet.size() == 1;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the input string
+        String s = scanner.nextLine();
+        
+        // Check if the string is good and print the result
+        System.out.println(isGoodString(s));
+        
+        scanner.close();
+    }
+}
+
+
+isGoodString takes a string s as input and checks if all characters in the string have the same frequency.
+It uses a HashMap (frequencyMap) to count occurrences of each character.
+After counting, it extracts these frequencies into a HashSet (frequencySet) to get unique frequencies.
+If frequencySet contains only one element, it means all characters in s have the same frequency, so it returns true; otherwise, it returns false.
+
+
+
+
+
+
+
 // Finded
 // import java.util.*;
 
