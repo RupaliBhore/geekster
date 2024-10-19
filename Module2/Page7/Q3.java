@@ -32,7 +32,7 @@
 // 2 is largest among the two lucky numbers, hence output is 2.
 
 
-import java.util.*;
+import java.util.*;                 //with array
 
 public class Q3 {
 
@@ -66,4 +66,93 @@ public class Q3 {
 
         scanner.close();
     }
+
+
 }
+
+
+
+
+                              //with hashmap
+import java.util.*;
+import java.util.HashMap;
+
+public class LuckyIntegerFinder {
+    public static int findLargestLuckyInteger(int[] arr) {
+        // Step 1: Count frequencies using HashMap
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+        
+        for (int num : arr) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+        
+        // Step 2: Find the largest lucky integer
+        int largestLucky = -1;
+        for (int key : frequencyMap.keySet()) {   ///keySet all key dete
+            int frequency = frequencyMap.get(key); //  get(key) ji key yeil tya key chi value return karel value freq                                                         //madhe store hoil
+            if (key == frequency) {                //key=
+                largestLucky = Math.max(largestLucky, key);
+            }
+        }
+        
+        // Step 3: Return result (largest lucky number or -1)
+        return largestLucky;
+    }
+
+    public static void main(String[] args) {
+        // Sample input
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        int arr[]=new int[n];
+        for(int i=0; i<n; i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        //int[] arr = {5, 1, 2, 2, 3, 4};
+        
+        // Output the largest lucky integer
+        System.out.println(findLargestLuckyInteger(arr));  // Output: 2
+    }
+}
+
+
+
+/////////////print key and ist freq progrma
+
+// import java.io.*;
+// import java.util.*;
+
+// public class Solution {
+
+//     static void maxFeq(int a[]) {
+//         // Step 1: Create a HashMap to count frequencies
+//         Map<Integer, Integer> hm = new HashMap<>();
+        
+//         // Step 2: Populate the HashMap with frequency counts
+//         for (int val : a) {
+//             if (hm.containsKey(val)) {
+//                 hm.put(val, hm.getOrDefault(val, 0) + 1);
+//             } else {
+//                 hm.put(val, 1);
+//             }
+//         }
+        
+//         // Step 3: Print all key-value pairs
+//         for (Map.Entry<Integer, Integer> entry : hm.entrySet()) {
+//             System.out.println(entry.getKey() + " " + entry.getValue());
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+        
+//         int a[] = new int[n];
+//         for (int i = 0; i < n; i++) {
+//             a[i] = sc.nextInt();
+//         }
+        
+//         maxFeq(a);
+//     }
+// }
