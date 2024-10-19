@@ -27,7 +27,7 @@
 
 
 
-import java.util.*;
+import java.util.*;    //with hashMap
 
 public class Q4 {
 
@@ -72,3 +72,60 @@ public class Q4 {
         return freqMapS.equals(freqMapT);
     }
 }
+
+
+
+
+
+//with array
+import java.util.Scanner;
+
+public class AnagramChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the two input strings
+        String s = scanner.nextLine();
+        String t = scanner.nextLine();
+        
+        // Check if the strings are anagrams
+        if (areAnagrams(s, t)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+        
+        scanner.close();
+    }
+    
+    public static boolean areAnagrams(String s, String t) {
+        // Check if lengths are different
+        if (s.length() != t.length()) {
+            return false;
+        }
+        
+        // Create frequency counter arrays for both strings (26 letters)
+        int[] freqS = new int[26];
+        int[] freqT = new int[26];
+        
+        // Count frequencies for string s
+        for (char c : s.toCharArray()) {
+            freqS[c - 'a']++;  // Increment the count for the character
+        }
+        
+        // Count frequencies for string t
+        for (char c : t.toCharArray()) {
+            freqT[c - 'a']++;  // Increment the count for the character
+        }
+        
+        // Compare the frequency arrays
+        for (int i = 0; i < 26; i++) {
+            if (freqS[i] != freqT[i]) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
+In Java (and many other programming languages), characters have corresponding integer values (ASCII values). When you subtract 'a' from another character c, you effectively get the position of the character in the alphabet.
