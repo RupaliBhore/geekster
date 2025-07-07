@@ -64,14 +64,16 @@ public class Q4 {
             arr[i] = scanner.nextInt();
         }
 
-        // Calculate prefix products
-        prefixProduct[0] = 1; // Initialize first element as 1
+        // Calculate prefix products    --1
+// Initialize first element as 1 karan 1 elemet la prefix nasato prefix mahnje curret sodun tyacha befor tyacha agodaracha
+//mahnje aaryacha 0 position var 1 yeil ani loop 1 position pai=un suru kel mhnje 1 postion cha phude 0 position ahe tyachavar ek ahe
+        prefixProduct[0] = 1; 
         for (int i = 1; i < n; i++) {
             prefixProduct[i] = prefixProduct[i - 1] * arr[i - 1];
         }
 
-        // Calculate suffix products
-        suffixProduct[n - 1] = 1; // Initialize last element as 1
+        // Calculate suffix products  1--
+        suffixProduct[n - 1] = 1; // Initialize last element as 1 karan last emelent la suffix nasato
         for (int i = n - 2; i >= 0; i--) {
             suffixProduct[i] = suffixProduct[i + 1] * arr[i + 1];
         }
