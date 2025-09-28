@@ -38,6 +38,7 @@
 
 // 4
 
+//you acn solve this problem with quick sort
 
 
 import java.util.*;
