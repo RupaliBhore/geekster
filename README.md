@@ -3,4 +3,4 @@ module 2
 module 3
 
 
-modules
+modules modules 1 modules 2 modules 3
